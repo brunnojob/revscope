@@ -1,0 +1,55 @@
+name: Suggest a tool
+description: Propose a reverse engineering or analysis tool for the catalog
+title: "[Tool]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: "Suggest tools that support authorized research, interoperability, debugging, preservation, or learning."
+  - type: input
+    id: name
+    attributes:
+      label: Tool name
+      placeholder: Project or product name
+    validations:
+      required: true
+  - type: input
+    id: official
+    attributes:
+      label: Official project URL
+    validations:
+      required: true
+  - type: input
+    id: docs
+    attributes:
+      label: Official documentation URL
+    validations:
+      required: true
+  - type: textarea
+    id: task
+    attributes:
+      label: What task does it help with?
+      description: Describe the task and who would benefit. Keep it neutral; RevScope does not rank tools.
+    validations:
+      required: true
+  - type: input
+    id: platforms
+    attributes:
+      label: Supported platforms
+      placeholder: Confirm using the official source
+    validations:
+      required: true
+  - type: input
+    id: license
+    attributes:
+      label: License and pricing
+      description: Include a source URL or say what could not be confirmed.
+    validations:
+      required: true
+  - type: checkboxes
+    id: authorized
+    attributes:
+      label: Scope
+      options:
+        - label: This suggestion is for legitimate, authorized analysis and follows the project's terms.
+          required: true
