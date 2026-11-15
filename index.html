@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,7 +19,8 @@
     <nav class="topnav" aria-label="Main navigation">
       <a href="#catalog">Catalog</a><a href="#workflows">Workflows</a><a href="https://github.com/brunnojob/revscope/blob/main/CONTRIBUTING.md">Contribute</a>
     </nav>
-    <a class="github-link" href="https://github.com/brunnojob/revscope">GitHub <span aria-hidden="true">↗</span></a>
+    <div class="header-actions"><label class="language-picker"><span class="sr-only">Language</span><select id="language" aria-label="Language"><option value="pt-BR">PT-BR</option><option value="en">EN</option></select></label>
+    <a class="github-link" href="https://github.com/brunnojob/revscope">GitHub <span aria-hidden="true">↗</span></a></div>
   </header>
   <main id="top">
     <section class="hero">
@@ -50,7 +52,7 @@
     <section class="catalog-section" id="catalog">
       <div class="catalog-heading"><div><span class="section-kicker">THE TOOLKIT</span><h2>Find your next tool<span class="accent-dot">.</span></h2><p class="catalog-sub">Clear metadata, official links, and a route into each tool.</p></div><div class="catalog-count"><strong id="result-count">20</strong><span>TOOLS<br>IN VIEW</span></div></div>
       <div class="toolbar">
-        <label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Search name, task, tag..." autocomplete="off"><kbd>/</kbd></label>
+        <label class="searchbox"><span aria-hidden="true">⌕</span><input id="search" aria-label="Search name, task, tag..." type="search" placeholder="Search name, task, tag..." autocomplete="off"><kbd>/</kbd></label>
         <label class="select-wrap"><span class="sr-only">Filter by category</span><select id="category"><option value="">All categories</option></select></label>
         <label class="select-wrap"><span class="sr-only">Filter by platform</span><select id="platform"><option value="">Any platform</option><option>Windows</option><option>macOS</option><option>Linux</option><option>Android</option><option>iOS</option></select></label>
         <label class="select-wrap"><span class="sr-only">Sort tools</span><select id="sort"><option value="name">Sort: A to Z</option><option value="category">Sort: Category</option><option value="level">Sort: Learning curve</option></select></label>
@@ -65,6 +67,7 @@
   <footer class="footer"><a class="brand footer-brand" href="#top"><span class="brand-mark">R<span>↗</span></span><span>REVSCOPE<small>FIELD GUIDE / v1</small></span></a><p>Open knowledge for better analysis.</p><div><a href="https://github.com/brunnojob/revscope">GitHub ↗</a><a href="https://github.com/brunnojob/revscope/issues">Issues ↗</a><span>MIT guide · 2026</span></div></footer>
   <dialog id="compare-dialog" class="compare-dialog"><form method="dialog"><button class="dialog-close" aria-label="Close comparison">×</button></form><span class="section-kicker">SIDE BY SIDE</span><h2>Tool comparison</h2><div id="comparison-content"></div></dialog>
   <div id="compare-bar" class="compare-bar" hidden><span><b id="compare-count">0</b> tools selected</span><div><button id="clear-compare" class="button button-quiet">Clear</button><button id="compare-now" class="button button-primary">Compare tools ↗</button></div></div>
+  <script src="i18n.js" defer></script>
   <script src="app.js" defer></script>
 </body>
 </html>
