@@ -161,7 +161,10 @@ const portuguese = {
   "Debug and program microcontrollers through supported on-chip debug adapters.": "Depure e programe microcontroladores por meio de adaptadores de depuração compatíveis.",
   "Hardware you own or are authorized to service": "Hardware próprio ou com autorização para manutenção",
   "Emulate machines and run isolated test environments across many architectures.": "Emule máquinas e execute ambientes de teste isolados em diversas arquiteturas.",
-  "Safe, repeatable analysis labs": "Laboratórios de análise seguros e reproduzíveis"
+  "Safe, repeatable analysis labs": "Laboratórios de análise seguros e reproduzíveis",
+  "Capture Android app traffic without root, inspect HTTP requests, and export PCAP files. HTTPS inspection requires extra TLS setup and app compatibility.": "Capture o tráfego de aplicativos Android sem root, inspecione requisições HTTP e exporte arquivos PCAP. A inspeção HTTPS exige configuração TLS adicional e compatibilidade do aplicativo.",
+  "Per-app Android traffic analysis and PCAP export": "Análise de tráfego por aplicativo Android e exportação PCAP",
+  "Free tier · paid extras": "Plano gratuito · recursos extras pagos"
 };
 let language;
 try { language = localStorage.getItem("revscope-language"); } catch {}

@@ -60,9 +60,11 @@ Then visit `http://localhost:8000`. The page loads its catalog from `data/tools.
 | Disassembly & decompilation | Ghidra, IDA Free, Cutter, radare2 |
 | Android & mobile | JADX, Apktool, MobSF, Frida |
 | .NET & managed code | ILSpy, dnSpyEx |
-| Network & protocols | Wireshark, mitmproxy, Burp Suite Community |
+| Network & protocols | Wireshark, mitmproxy, Burp Suite Community, PCAPdroid |
 | Firmware & embedded | Binwalk, OpenOCD |
 | Emulation & lab | QEMU |
+
+PCAPdroid captures per-app traffic on Android without root and exports PCAP files. HTTP inspection is supported; HTTPS inspection requires additional TLS setup and compatible apps. Some extra features are paid. See the [official guide](https://emanuele-f.github.io/PCAPdroid/quick_start).
 
 This is a starting set, not a ranking or an endorsement. Pricing, supported formats, and license terms can change; confirm details with each maintainer before adopting a tool.
 

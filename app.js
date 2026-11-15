@@ -10,8 +10,8 @@ const savedButton = document.querySelector("#saved-filter");
 const compareBar = document.querySelector("#compare-bar");
 const workflowRules = {
   triage: { title: "Binary triage", tools: ["die", "capa", "floss", "ghidra"] },
-  android: { title: "Android app analysis", tools: ["apktool", "jadx", "frida", "mobsf"] },
-  network: { title: "Network behavior", tools: ["wireshark", "mitmproxy", "burp-community", "frida"] },
+  android: { title: "Android app analysis", tools: ["apktool", "jadx", "frida", "mobsf", "pcapdroid"] },
+  network: { title: "Network behavior", tools: ["wireshark", "mitmproxy", "burp-community", "frida", "pcapdroid"] },
   firmware: { title: "Firmware lab", tools: ["binwalk", "ghidra", "openocd", "qemu"] }
 };
 const levelRank = { Beginner: 1, Intermediate: 2, Advanced: 3 };
@@ -156,7 +156,7 @@ document.addEventListener("keydown", event => {
   if (event.key === "Escape" && document.querySelector("#compare-dialog").open) document.querySelector("#compare-dialog").close();
 });
 
-fetch("data/tools.json")
+fetch("data/tools.json?v=20261115-pcapdroid")
   .then(response => { if (!response.ok) throw new Error("Could not load tool catalog"); return response.json(); })
   .then(data => { tools = data; populateCategories(); render(); })
   .catch(() => { catalogFailed = true; render(); });
